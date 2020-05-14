@@ -2,10 +2,10 @@
 venv
 
 .idea
-__pycache__/config.cpython-38.pyc
-
-__pycache__/mail_send.cpython-38.pyc
+log.log
 
 settings.ini
 
-log.log
+__pycache__/mail_send.cpython-38.pyc
+
+__pycache__/config.cpython-38.pyc
