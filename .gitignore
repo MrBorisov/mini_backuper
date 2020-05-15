@@ -9,3 +9,9 @@ settings.ini
 __pycache__/mail_send.cpython-38.pyc
 
 __pycache__/config.cpython-38.pyc
+
+Lib/site-packages/
+
+Scripts/
+
+pyvenv.cfg
