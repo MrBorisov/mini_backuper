@@ -11,7 +11,9 @@ def create_config(path='settings.ini'):
     config.add_section('Settings')
     config.set('Settings', 'cur_dir', 'None')
     config.set('Settings', 'dst_dir', 'None')
+    config.set('Settings', 'count', 'None')
     config.set('Settings', 'dir_info', 'You are copying from %(cur_dir)s to %(dst_dir)s')
+
 
     config.add_section('mail')
     config.set('mail', 'mail_from', 'None')
