@@ -26,6 +26,11 @@ def copy_date(cur_dir, dst_dir, blok):
         mail_send.send_err(str(why))
     logging.info(cur_date + " Finish copy" + blok)
 
+def count_date(dst_dir, count_copyes):
+    files = os.listdir(dst_dir)
+    files = [os.path.join(dst_dir, file) for file in files]
+    """тут получаем пусть к самой старой папке или файлу в папке path"""
+    print(min(files, key=os.path.getctime))
 
 cfg_file = config.get_config()
 ''' 
@@ -33,6 +38,8 @@ cfg_file = config.get_config()
 '''
 for el in cfg_file.sections():
     if el != 'mail' and el != 'area':
+        count_copyes = config.get_setting(el, 'count')
         cur_dir = config.get_setting(el, 'cur_dir')
         dst_dir = config.get_setting(el, 'dst_dir')
         copy_date(cur_dir, dst_dir, el)
+        count_date(dst_dir, count_copyes)
